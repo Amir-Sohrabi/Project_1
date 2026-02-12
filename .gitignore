@@ -7,6 +7,7 @@
 /[Tt]emp/
 /.utmp/
 /.plastic/
+/.idea/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
