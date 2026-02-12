@@ -5,6 +5,8 @@
 .utmp/
 /[Ll]ibrary/
 /[Tt]emp/
+/.utmp/
+/.plastic/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
