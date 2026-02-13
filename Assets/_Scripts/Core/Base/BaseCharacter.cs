@@ -9,9 +9,12 @@ namespace _Scripts.Core.Base
         // Data
         private CharacterData _characterData;
         
+        protected float Speed { get; private set; }
+        
         public void Initialize(CharacterData characterData)
         {
             _characterData = characterData;
+            Speed = _characterData.speed;
         }
         
         public void Attack(IKillable target)

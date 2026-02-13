@@ -5,20 +5,24 @@ namespace _Scripts.Core.Characters
 {
     public class Amir : BaseCharacter
     {
-        private void Awake()
-        {
-            Debug.Log("Amir Awake");
-        }
+        private Vector3 _moveDirection;
 
         private void Update()
         {
-            // Input
-            Debug.Log("Hi");
+            var horizontal = Input.GetAxisRaw("Horizontal");
+            var vertical = Input.GetAxisRaw("Vertical");
+
+            _moveDirection = new Vector3(horizontal, 0f, vertical).normalized;
         }
 
         private void FixedUpdate()
         {
-            
+            if (_moveDirection == Vector3.zero)
+            {
+                return;
+            }
+
+            transform.position += _moveDirection * Speed * Time.fixedDeltaTime;
         }
     }
 }
