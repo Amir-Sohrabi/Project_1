@@ -8,6 +8,8 @@ namespace _Scripts.Core.Base
     {
         // Data
         private CharacterData _characterData;
+
+        protected float Speed => _characterData != null ? _characterData.speed : 0f;
         
         public void Initialize(CharacterData characterData)
         {
