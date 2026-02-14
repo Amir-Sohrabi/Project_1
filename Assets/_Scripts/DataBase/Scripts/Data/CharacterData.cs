@@ -15,5 +15,6 @@ namespace _Scripts.DataBase.Scripts.Data
         public float health;
         public float damage;
         public float speed;
+        public float fireRate;
     }
 }

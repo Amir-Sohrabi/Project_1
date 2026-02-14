@@ -7,7 +7,7 @@ namespace _Scripts.Core.Base
     public class BaseCastle : MonoBehaviour, IAttacker, IKillable, IPlaceable
     {
         // Data
-        private CastleData _castleData = new();
+        protected CastleData _castleData;
 
         public void Initialize(CastleData castleData)
         {

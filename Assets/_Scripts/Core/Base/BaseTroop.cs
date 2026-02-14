@@ -1,34 +1,34 @@
-using _Scripts.Abstractions.GamePlay;
+﻿using _Scripts.Abstractions.GamePlay;
 using _Scripts.DataBase.Scripts.Data;
 using UnityEngine;
 
 namespace _Scripts.Core.Base
 {
-    public abstract class BaseEnemy : MonoBehaviour, IAttacker, IKillable
+    public class BaseTroop : MonoBehaviour, IAttacker, IKillable
     {
         // Data
-        protected EnemyData _enemyData;
-        
-        public void Initialize(EnemyData enemyData)
+        protected TroopData _troopData;
+
+        public void Initialize(TroopData troopData)
         {
-            _enemyData = enemyData;
+            _troopData = troopData;
         }
-        
+
         public void Attack(IKillable target)
         {
-            target.TakeDamage(_enemyData.damage);
+            target.TakeDamage(_troopData.damage);
         }
-        
+
         public void TakeDamage(float damageAmount)
         {
-            if (_enemyData.health <= damageAmount)
+            if (_troopData.health <= damageAmount)
             {
-                _enemyData.health = 0;
+                _troopData.health = 0;
                 Die();
                 return;
             }
-            
-            _enemyData.health -= damageAmount;
+
+            _troopData.health -= damageAmount;
         }
 
         public void Die()

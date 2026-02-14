@@ -26,6 +26,7 @@ namespace _Scripts.Managers.GamePlay
                 enemyData.health = e.health;
                 enemyData.damage = e.damage;
                 enemyData.speed = e.speed;
+                enemyData.fireRate = e.fireRate;
 
                 _copiedEnemyData.Add(enemyData);
             });

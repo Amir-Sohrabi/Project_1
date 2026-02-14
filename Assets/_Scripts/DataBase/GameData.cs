@@ -14,6 +14,7 @@ namespace _Scripts.DataBase
         [SerializeField] private CharacterResources characterResources;
         [SerializeField] private EnemyResources enemyResources;
         [SerializeField] private WaveResources waveResources;
+        [SerializeField] private TroopResources troopResources;
         
         // Used by others
         public CastleResources CastleResources => castleResources;
@@ -21,6 +22,7 @@ namespace _Scripts.DataBase
         public CharacterResources CharacterResources => characterResources;
         public EnemyResources EnemyResources => enemyResources;
         public WaveResources WaveResources => waveResources;
+        public TroopResources TroopResources => troopResources;
         
         [HideInInspector] [ReadOnly] public DataHub datahub;
     }

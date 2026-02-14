@@ -7,7 +7,7 @@ namespace _Scripts.Core.Base
     public abstract class BaseCharacter : MonoBehaviour, IAttacker, IKillable
     {
         // Data
-        private CharacterData _characterData;
+        protected CharacterData _characterData;
         
         public void Initialize(CharacterData characterData)
         {
